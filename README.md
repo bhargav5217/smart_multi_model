@@ -1,31 +1,28 @@
-# Smart Multi-Model Implementer
+---
+title: SMMI V2
+emoji: 🤖
+colorFrom: blue
+colorTo: green
+sdk: streamlit
+sdk_version: 1.32.0
+app_file: app.py
+pinned: false
+---
 
-Upload any CSV, pick a target column, and the system automatically runs EDA,
-trains 6 models, compares them, and tells you which one performs best.
+# Smart Multi-Model Implementer (SMMI) v2
 
-## Run
+Upload any CSV dataset → automatic EDA → preprocessing → train 6 models → compare performance → feature importance.
 
-```
-pip install -r requirements.txt
-streamlit run app.py
-```
+## What's New in V2
+- Lightweight & fast — no freezing
+- All steps cached with @st.cache_data
+- Progress bar per model during training
+- Feature importance chart for best model
+- Clean sidebar navigation
+- HF-ready README built in
 
-## Structure
-
-smmi v1/
-
-# Main Streamlit app
-- app.py  
-
-# Project dependencies
-- requirements.txt  
-
-# Python modules
-- modules/  
-  # Data loading, EDA, plots
-  - data.py  
-  
-  # Preprocessing, training, evaluation
-  - models.py  
-
-
+## How to Use
+1. Upload any CSV file
+2. Select the target column
+3. Run EDA, then Train Models
+4. Compare results and see best model
