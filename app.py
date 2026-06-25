@@ -99,7 +99,7 @@ if st.session_state.get("trained"):
 
     # Step 5: Compare
     st.subheader("Step 5: Compare all models")
-    st.dataframe(metrics_df, width='stretch')
+    st.dataframe(metrics_df, use_container_width=True)
 
     metric = st.selectbox("Rank models by:", ["F1 Score", "Accuracy", "ROC-AUC", "Precision", "Recall"])
     st.pyplot(plot_comparison(metrics_df, metric))
